@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiffin Tale</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    header { background: linear-gradient(90deg, #ff6f61, #ffcc00); color: white; padding: 2rem; text-align: center; }
+    header h1 { font-size: 3rem; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem; text-align: center; }
+    .services { display: flex; justify-content: center; margin-top: 2rem; gap: 2rem; }
+    .card { background: #f0f0f0; padding: 1rem; border-radius: 10px; width: 30%; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer; }
+    .card h3 { color: #ff6f61; }
+    footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+
+    /* Popup modal styling */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .popup h3 { color: #ff6f61; margin-bottom: 1rem; }
+    .popup button {
+      background: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .popup button:hover { background: #ffcc00; color: black; }
+
+    /* Overlay background */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    /* Responsive design for mobile */
+    @media (max-width: 768px) {
+      .services { flex-direction: column; align-items: center; }
+      .card { width: 80%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Tiffin Tales</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Delicious Meals, Delivered Fresh</h2>
+    <p>At Tiffin Tale, we bring homemade flavors straight to your doorstep.</p>
+  
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card" onclick="openPopup('daily')">
+        <h3>Daily Tiffins</h3>
+        <p>Nutritious meals prepared fresh every day.</p>
+      </div>
+      <div class="card" onclick="openPopup('feast')">
+        <h3>Feast For Every Occasion</h3>
+        <p>Celebrate birthdays, weddings, and parties with our special feast menus crafted for every occasion!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: tiffintales1222@gmail.com</p>
+    <p>Phone: +1 (519)577-9898</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Tiffin Tale | Designed by Komal</p>
+  </footer>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+  <!-- Popups -->
+  <div class="popup" id="dailyPopup">
+    <h3>🍲 Daily Tiffin Menu</h3>
+    <p>Monday: Veg Thali<br>
+       Tuesday: Paneer Curry<br>
+       Wednesday: Dal & Rice<br>
+       Thursday: Chapati & Sabzi<br>
+       Friday: Special Combo Meal</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <div class="popup" id="feastPopup">
+    <h3>🎉 Feast For Every Occasion</h3>
+    <p>Celebrate birthdays, weddings, and parties with our special feast menus crafted for every occasion!</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    function openPopup(type) {
+      document.getElementById("overlay").style.display = "block";
+      if (type === "daily") {
+        document.getElementById("dailyPopup").style.display = "block";
+      } else if (type === "feast") {
+        document.getElementById("feastPopup").style.display = "block";
+      }
+    }
+
+    function closePopup() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("dailyPopup").style.display = "none";
+      document.getElementById("feastPopup").style.display = "none";
+    }
+
+    // Auto-open Services section when page reloads with #services
+    window.onload = function() {
+      if (window.location.hash === "#services") {
+        document.getElementById("services").scrollIntoView({behavior: "smooth"});
+      }
+    };
+  </script>
+</body>
+</html>
