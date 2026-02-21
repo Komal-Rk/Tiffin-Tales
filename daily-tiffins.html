@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Tiffins - Tiffin Tale</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    header { background: linear-gradient(90deg, #ff6f61, #ffcc00); color: white; padding: 2rem; text-align: center; }
+    header h1 { font-size: 3rem; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .menu-card { background: #f9f9f9; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 4px solid #ff6f61; }
+    .menu-card h3 { color: #ff6f61; margin-top: 0; }
+    .menu-card p { color: #666; line-height: 1.6; }
+    .price { font-size: 1.3rem; color: #ffcc00; font-weight: bold; margin-top: 1rem; }
+    .btn { background: #ff6f61; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
+    .btn:hover { background: #ffcc00; color: black; }
+    footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    @media (max-width: 768px) {
+      .menu-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily Tiffin Menu</h1>
+    <nav>
+      <a href="Index.html">Home</a>
+      <a href="Index.html#services">Services</a>
+      <a href="Index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Our Weekly Menu</h2>
+    <p>Fresh, nutritious meals prepared daily with the finest ingredients.</p>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>🥘 Monday: Veg Thali</h3>
+        <p>Mixed vegetables with dal, rice, chapati, and yogurt. A complete balanced meal with homemade flavors.</p>
+        <p class="price">₹120 / $8</p>
+        <button class="btn">Order Now</button>
+      </div>
+
+      <div class="menu-card">
+        <h3>🧀 Tuesday: Paneer Curry</h3>
+        <p>Soft paneer in aromatic tomato-based curry with rice and fresh bread. Rich in protein and delicious!</p>
+        <p class="price">₹150 / $10</p>
+        <button class="btn">Order Now</button>
+      </div>
+
+      <div class="menu-card">
+        <h3>🍲 Wednesday: Dal & Rice</h3>
+        <p>Lentil soup with steamed rice, seasonal vegetables, and traditional spices. Light yet filling.</p>
+        <p class="price">₹100 / $7</p>
+        <button class="btn">Order Now</button>
+      </div>
+
+      <div class="menu-card">
+        <h3>🫓 Thursday: Chapati & Sabzi</h3>
+        <p>Fresh whole wheat bread with mixed vegetable curry, salt, and butter. Perfect everyday meal.</p>
+        <p class="price">₹110 / $7.50</p>
+        <button class="btn">Order Now</button>
+      </div>
+
+      <div class="menu-card">
+        <h3>⭐ Friday: Special Combo Meal</h3>
+        <p>Chef's special combination featuring chicken/paneer, dal, rice, bread, salad, and dessert. Best value!</p>
+        <p class="price">₹200 / $13</p>
+        <button class="btn">Order Now</button>
+      </div>
+
+      <div class="menu-card">
+        <h3>🍛 Weekend Special</h3>
+        <p>Biryani or special curry with all the sides. Indulge yourself with our premium weekend menu.</p>
+        <p class="price">₹180 / $12</p>
+        <button class="btn">Order Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Tiffin Tale | Designed by Komal</p>
+  </footer>
+</body>
+</html>
