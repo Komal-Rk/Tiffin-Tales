@@ -53,6 +53,9 @@
     }
 
     /* Responsive design for mobile */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1rem; }
+    .gallery img { width: 100%; border-radius: 8px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .gallery img.visible { opacity: 1; transform: translateY(0); }
     @media (max-width: 768px) {
       .services { flex-direction: column; align-items: center; }
       .card { width: 80%; }
@@ -65,6 +68,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
+      <a href="images.html">Images</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -87,6 +91,8 @@
       </div>
     </div>
   </section>
+
+
 
   <section id="contact">
     <h2>Contact Us</h2>
@@ -147,6 +153,18 @@
         document.getElementById("services").scrollIntoView({behavior: "smooth"});
       }
     };
+    // reveal images when scrolling
+    function revealImages() {
+      const imgs = document.querySelectorAll('.gallery img');
+      imgs.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          img.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealImages);
+    window.addEventListener('load', revealImages);
   </script>
 </body>
 </html>
