@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feast For Every Occasion - Tiffin Tale</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+
+      /* Background Added */
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('vegetables.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
     header { background: linear-gradient(90deg, #ff6f61, #ffcc00); color: white; padding: 2rem; text-align: center; }
     header h1 { font-size: 3rem; }
     nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
@@ -16,15 +28,14 @@
     .menu-card h3 { color: #ff6f61; margin-top: 0; }
     .menu-card p { color: #666; line-height: 1.6; }
     .menu-card ul { text-align: left; color: #555; }
-    .price { font-size: 1.3rem; color: #ffcc00; font-weight: bold; margin-top: 1rem; }
-    .btn { background: #ff6f61; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
-    .btn:hover { background: #ffcc00; color: black; }
     footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+
     @media (max-width: 768px) {
       .menu-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Feast For Every Occasion</h1>
@@ -40,99 +51,111 @@
     <p>Celebrate your special moments with our curated feast menus. Perfect for birthdays, weddings, anniversaries, and more!</p>
 
     <div class="menu-grid">
+
       <div class="menu-card">
-        <h3>🎂 Birthday Celebration</h3>
-        <p>Make birthdays memorable with our special menu!</p>
+        <h3>Appetizer</h3>
+        <p>Start your celebration with irresistible bites!</p>
         <ul>
-          <li>Paneer Tikka Appetizer</li>
-          <li>Butter Chicken Curry</li>
-          <li>Flavored Basmati Rice</li>
-          <li>Naan & Chapati</li>
-          <li>Dessert & Beverages</li>
+          <li>Bhajiya (All Types)</li>
+          <li>Chaat</li>
+          <li>Daal Vada</li>
+          <li>Fries</li>
+          <li>Hakka Noodles</li>
+          <li>Pizza</li>
+          <li>Puff</li>
+          <li>Punjabi Samosa</li>
+          <li>Sev Khamni</li>
+          <li>Vagharela Khaman</li>
         </ul>
-        <p class="price">₹500 / $33 per person</p>
-        <button class="btn">Order Now</button>
       </div>
 
       <div class="menu-card">
-        <h3>💍 Wedding & Engagement</h3>
-        <p>Grand feasts for your big day celebration!</p>
+        <h3>Punjabi Dishes</h3>
+        <p>Rich flavors crafted for grand occasions!</p>
         <ul>
-          <li>Shami Kebab Starter</li>
-          <li>Tandoori Chicken</li>
-          <li>Biryani Special</li>
-          <li>Paneer Tikka Masala</li>
-          <li>Multiple Bread Varieties</li>
-          <li>Premium Desserts</li>
+          <li>Chole Masala</li>
+          <li>Kaju Masala</li>
+          <li>Methi Malai Paneer</li>
+          <li>Paneer Bhurji</li>
+          <li>Paneer Butter Masala</li>
+          <li>Paneer Lababdar</li>
+          <li>Veg Handi</li>
+          <li>Veg Kolhapuri</li>
         </ul>
-        <p class="price">₹800 / $53 per person</p>
-        <button class="btn">Order Now</button>
       </div>
 
       <div class="menu-card">
-        <h3>👨‍👩‍👧‍👦 Family Gathering</h3>
-        <p>Bring families together with homemade comfort food!</p>
+        <h3>Gujarati Dishes</h3>
+        <p>Comforting classics that bring families together!</p>
         <ul>
-          <li>Mixed Vegetable Curry</li>
-          <li>Dal Makhni</li>
-          <li>Chicken Curry</li>
-          <li>Steamed Rice</li>
-          <li>Fresh Bread</li>
-          <li>Pickle & Salad</li>
+          <li>Bhindi Masala</li>
+          <li>Desi Channa</li>
+          <li>Lasaniya Bataka</li>
+          <li>Mix Veg</li>
+          <li>Ringana Bataka</li>
+          <li>Sev Tameta</li>
+          <li>Undhiyu - Jalebi</li>
         </ul>
-        <p class="price">₹400 / $26 per person</p>
-        <button class="btn">Order Now</button>
       </div>
 
       <div class="menu-card">
-        <h3>🎉 Corporate Event</h3>
-        <p>Professional catering for your business events!</p>
+        <h3>Rice</h3>
+        <p>Delight your guests with flavorful rice varieties, perfect for any occasion!</p>
         <ul>
-          <li>Assorted Starters</li>
-          <li>Multiple Curry Options</li>
-          <li>Biryani & Pulao</li>
-          <li>Breads & Sides</li>
-          <li>Beverages & Desserts</li>
-          <li>Customizable Menu</li>
+          <li>Hyderabadi Biryani (Green)</li>
+          <li>Jeera Rice</li>
+          <li>Peas Pulao</li>
+          <li>Plain Rice</li>
+          <li>Tawa Pulao (Pav Bhaji Style)</li>
+          <li>Veg Dum Biryani</li>
         </ul>
-        <p class="price">₹600 / $40 per person</p>
-        <button class="btn">Order Now</button>
       </div>
 
       <div class="menu-card">
-        <h3>🎊 Party Buffet</h3>
-        <p>Unlimited options for your house parties!</p>
+        <h3>Daal</h3>
+        <p>Comforting daal selections to make your gatherings warm and memorable!</p>
         <ul>
-          <li>6-8 Curry Varieties</li>
-          <li>Tandoori Specialties</li>
-          <li>Multiple Rice Dishes</li>
-          <li>Assorted Breads</li>
-          <li>Appetizers & Starters</li>
-          <li>Dessert Bar</li>
+          <li>Daal Makhani</li>
+          <li>Daal Tadka Fry</li>
+          <li>Gujarati Varan Daal</li>
         </ul>
-        <p class="price">₹700 / $47 per person</p>
-        <button class="btn">Order Now</button>
       </div>
 
       <div class="menu-card">
-        <h3>✨ Premium Wedding Feast</h3>
-        <p>Our most luxurious menu for grand celebrations!</p>
+        <h3>Bread</h3>
+        <p>Freshly prepared breads and accompaniments, ideal for grand celebrations!</p>
         <ul>
-          <li>5-Star Appetizers</li>
-          <li>Multiple Meat & Veg Curries</li>
-          <li>Specialty Biryanis</li>
-          <li>Live Bread Station</li>
-          <li>Premium Desserts</li>
+          <li>Butter Roti</li>
+          <li>Chapati</li>
           <li>Mocktails & Beverages</li>
+          <li>Naan</li>
+          <li>Paratha (All Types)</li>
+          <li>Puri</li>
         </ul>
-        <p class="price">₹1000 / $67 per person</p>
-        <button class="btn">Order Now</button>
       </div>
+
+      <div class="menu-card">
+        <h3>Dessert</h3>
+        <p>Sweet endings that bring joy to every party and celebration!</p>
+        <ul>
+          <li>Basundi</li>
+          <li>Dhudhi Halwa</li>
+          <li>Fruit Custard</li>
+          <li>Gajar Halwa</li>
+          <li>Gulab Jamun</li>
+          <li>Jalebi</li>
+          <li>Kheer (Rice & Sabudana)</li>
+          <li>Laddu (All Types)</li>
+          <li>Magas</li>
+          <li>Suji Halwa</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
   <footer>
-    <p>© 2026 Tiffin Tale | Designed by Komal</p>
+    <p>© 2026 Tiffin Tales | Designed by Komal</p>
   </footer>
 </body>
 </html>
