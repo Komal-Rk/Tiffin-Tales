@@ -1,32 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Images - Tiffin Tale</title>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
-    header { background: linear-gradient(90deg, #ff6f61, #ffcc00); color: white; padding: 2rem; text-align: center; }
-    header h1 { font-size: 2.5rem; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 1rem; padding: 2rem; }
-    .gallery img { width: 100%; border-radius: 8px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .gallery img.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 768px) {
-      .gallery { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Tiffin Tale</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                    url('vegetables.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #ff6f61, #ffcc00);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* SECTION */
+.gallery-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+}
+
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Image Gallery</h1>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
-  </header>
+
+<header>
+  <h1>Tiffin Tale Gallery</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="daily-tiffins.html">Daily Tiffin</a>
+    <a href="feast-menu.html">Feast for Festival</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="gallery-section">
+  <h2>Our Delicious Creations</h2>
 
   <div class="gallery">
+
+    <!-- Vegetables Image Added -->
+    <img src="vegetables.jpg" alt="Fresh Vegetables">
+
+    <!-- All 24 Gallery Images -->
     <img src="gallery1.jpg" alt="Tiffin Image 1">
     <img src="gallery2.jpg" alt="Tiffin Image 2">
     <img src="gallery3.jpg" alt="Tiffin Image 3">
@@ -51,21 +132,13 @@
     <img src="gallery22.jpg" alt="Tiffin Image 22">
     <img src="gallery23.jpg" alt="Tiffin Image 23">
     <img src="gallery24.jpg" alt="Tiffin Image 24">
-    <!-- Add more images as needed -->
-  </div>
 
-  <script>
-    function revealImages() {
-      const imgs = document.querySelectorAll('.gallery img');
-      imgs.forEach(img => {
-        const rect = img.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          img.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', revealImages);
-    window.addEventListener('load', revealImages);
-  </script>
+  </div>
+</section>
+
+<footer>
+  © 2026 Tiffin Tales | Designed by Komal
+</footer>
+
 </body>
 </html>
