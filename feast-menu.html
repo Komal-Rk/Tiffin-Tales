@@ -1,161 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feast For Every Occasion - Tiffin Tale</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feast For Every Occasion - Tiffin Tale</title>
 
-      /* Background Added */
-      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                        url('vegetables.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    header { background: linear-gradient(90deg, #ff6f61, #ffcc00); color: white; padding: 2rem; text-align: center; }
-    header h1 { font-size: 3rem; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
-    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .menu-card { background: #f9f9f9; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 4px solid #ff6f61; }
-    .menu-card h3 { color: #ff6f61; margin-top: 0; }
-    .menu-card p { color: #666; line-height: 1.6; }
-    .menu-card ul { text-align: left; color: #555; }
-    footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+<style>
 
-    @media (max-width: 768px) {
-      .menu-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+body{
+font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+color:white;
+
+/* Better readable background */
+background-image:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('vegetables.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* Header */
+header{
+background:linear-gradient(90deg,#ff6f61,#ffb300);
+padding:25px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:38px;
+letter-spacing:1px;
+}
+
+/* Navigation */
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+}
+
+nav a i{
+margin-right:6px;
+}
+
+nav a:hover{
+color:#222;
+}
+
+/* Container */
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.container h2{
+font-size:32px;
+color:#ffcc00;
+}
+
+.container p{
+font-size:18px;
+color:#f2f2f2;
+}
+
+/* Menu Grid */
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+/* Menu Card */
+.menu-card{
+background:rgba(255,255,255,0.95);
+color:#333;
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.menu-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Card Heading */
+.menu-card h3{
+margin-top:0;
+color:#ff6f61;
+font-size:22px;
+}
+
+.menu-card h3 i{
+margin-right:8px;
+color:#ffb300;
+}
+
+/* Text */
+.menu-card p{
+color:#444;
+}
+
+/* List */
+.menu-card ul{
+text-align:left;
+padding-left:20px;
+color:#222;
+}
+
+.menu-card ul li{
+margin-bottom:5px;
+}
+
+/* Footer */
+footer{
+background:#111;
+text-align:center;
+padding:15px;
+margin-top:40px;
+font-size:14px;
+}
+
+footer p{
+margin:0;
+color:#ccc;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+header h1{
+font-size:28px;
+}
+
+.container h2{
+font-size:26px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Feast For Every Occasion</h1>
-    <nav>
-      <a href="Index.html">Home</a>
-      <a href="Index.html#services">Services</a>
-      <a href="Index.html#contact">Contact</a>
-    </nav>
-  </header>
 
-  <div class="container">
-    <h2>Special Occasion Menus</h2>
-    <p>Celebrate your special moments with our curated feast menus. Perfect for birthdays, weddings, anniversaries, and more!</p>
+<header>
 
-    <div class="menu-grid">
+<h1>🍽 Feast For Every Occasion</h1>
 
-      <div class="menu-card">
-        <h3>Appetizer</h3>
-        <p>Start your celebration with irresistible bites!</p>
-        <ul>
-          <li>Bhajiya (All Types)</li>
-          <li>Chaat</li>
-          <li>Daal Vada</li>
-          <li>Fries</li>
-          <li>Hakka Noodles</li>
-          <li>Pizza</li>
-          <li>Puff</li>
-          <li>Punjabi Samosa</li>
-          <li>Sev Khamni</li>
-          <li>Vagharela Khaman</li>
-        </ul>
-      </div>
+<nav>
+    <a href="index.html">
+<i class="fa-solid fa-house"></i> Home</a>
+      <a href="review.html">
+      <i class="fa-solid fa-star"></i> Review</a>
+      <a href="contact.html">
+<i class="fa-solid fa-envelope"></i> Contact</a> 
+</nav>
 
-      <div class="menu-card">
-        <h3>Punjabi Dishes</h3>
-        <p>Rich flavors crafted for grand occasions!</p>
-        <ul>
-          <li>Chole Masala</li>
-          <li>Kaju Masala</li>
-          <li>Methi Malai Paneer</li>
-          <li>Paneer Bhurji</li>
-          <li>Paneer Butter Masala</li>
-          <li>Paneer Lababdar</li>
-          <li>Veg Handi</li>
-          <li>Veg Kolhapuri</li>
-        </ul>
-      </div>
+</header>
 
-      <div class="menu-card">
-        <h3>Gujarati Dishes</h3>
-        <p>Comforting classics that bring families together!</p>
-        <ul>
-          <li>Bhindi Masala</li>
-          <li>Desi Channa</li>
-          <li>Lasaniya Bataka</li>
-          <li>Mix Veg</li>
-          <li>Ringana Bataka</li>
-          <li>Sev Tameta</li>
-          <li>Undhiyu - Jalebi</li>
-        </ul>
-      </div>
+<div class="container">
 
-      <div class="menu-card">
-        <h3>Rice</h3>
-        <p>Delight your guests with flavorful rice varieties, perfect for any occasion!</p>
-        <ul>
-          <li>Hyderabadi Biryani (Green)</li>
-          <li>Jeera Rice</li>
-          <li>Peas Pulao</li>
-          <li>Plain Rice</li>
-          <li>Tawa Pulao (Pav Bhaji Style)</li>
-          <li>Veg Dum Biryani</li>
-        </ul>
-      </div>
+<h2>Special Occasion Menus</h2>
 
-      <div class="menu-card">
-        <h3>Daal</h3>
-        <p>Comforting daal selections to make your gatherings warm and memorable!</p>
-        <ul>
-          <li>Daal Makhani</li>
-          <li>Daal Tadka Fry</li>
-          <li>Gujarati Varan Daal</li>
-        </ul>
-      </div>
+<p>
+Celebrate your special moments with our curated feast menus.
+Perfect for birthdays, weddings, anniversaries, and more!
+</p>
 
-      <div class="menu-card">
-        <h3>Bread</h3>
-        <p>Freshly prepared breads and accompaniments, ideal for grand celebrations!</p>
-        <ul>
-          <li>Butter Roti</li>
-          <li>Chapati</li>
-          <li>Mocktails & Beverages</li>
-          <li>Naan</li>
-          <li>Paratha (All Types)</li>
-          <li>Puri</li>
-        </ul>
-      </div>
+<div class="menu-grid">
 
-      <div class="menu-card">
-        <h3>Dessert</h3>
-        <p>Sweet endings that bring joy to every party and celebration!</p>
-        <ul>
-          <li>Basundi</li>
-          <li>Dhudhi Halwa</li>
-          <li>Fruit Custard</li>
-          <li>Gajar Halwa</li>
-          <li>Gulab Jamun</li>
-          <li>Jalebi</li>
-          <li>Kheer (Rice & Sabudana)</li>
-          <li>Laddu (All Types)</li>
-          <li>Magas</li>
-          <li>Suji Halwa</li>
-        </ul>
-      </div>
+<div class="menu-card">
+<h3><i class="fa-solid fa-burger"></i>Appetizer</h3>
+<p>Start your celebration with irresistible bites!</p>
+<ul>
+<li>Pizza</li>
+<li>Hakka Noodles</li>
+<li>Punjabi Samosa</li>
+<li>Vagharela Khaman</li>
+<li>Sev Khamni</li>
+<li>Daal Vada</li>
+<li>Bhajiya (All types)</li>
+<li>Chaat</li>
+<li>Fries</li>
+<li>Puff</li>
+</ul>
+</div>
 
-    </div>
-  </div>
+<div class="menu-card">
+<h3><i class="fa-solid fa-pepper-hot"></i>Punjabi Dishes</h3>
+<p>Rich flavors crafted for grand occasions!</p>
+<ul>
+<li>Paneer Lababdar</li>
+<li>Paneer Butter Masala</li>
+<li>Paneer Bhurji</li>
+<li>Methi Malai Paneer</li>
+<li>Kaju Masala</li>
+<li>Veg Handi</li>
+<li>Veg Kolhapuri</li>
+<li>Chole Masala</li>
+</ul>
+</div>
 
-  <footer>
-    <p>© 2026 Tiffin Tales | Designed by Komal</p>
-  </footer>
+<div class="menu-card">
+<h3><i class="fa-solid fa-plate-wheat"></i>Gujarati Dishes</h3>
+<p>Comforting classics that bring families together!</p>
+<ul>
+<li>Ringana Bataka</li>
+<li>Desi Channa</li>
+<li>Mix Veg</li>
+<li>Bhindi Masala</li>
+<li>Undhiyu Jalebi</li>
+<li>Sev Tameta</li>
+<li>Lasaniya Bataka</li>
+</ul>
+</div>
+
+<div class="menu-card">
+<h3><i class="fa-solid fa-bowl-rice"></i>Rice</h3>
+<p>Delight your guests with flavorful rice varieties.</p>
+<ul>
+<li>Plain Rice</li>
+<li>Jeera Rice</li>
+<li>Peas Pulav</li>
+<li>Tawa Pulav</li>
+<li>Veg Dum Biryani</li>
+<li>Hyderabadi Green Biryani</li>
+</ul>
+</div>
+
+<div class="menu-card">
+<h3><i class="fa-solid fa-bowl-food"></i>Daal</h3>
+<p>Comforting daal selections for memorable gatherings!</p>
+<ul>
+<li>Gujarati Vara Daal</li>
+<li>Daal Tadka Fry</li>
+<li>Daal Makhani</li>
+</ul>
+</div>
+
+<div class="menu-card">
+<h3><i class="fa-solid fa-bread-slice"></i>Bread</h3>
+<p>Fresh breads ideal for celebrations.</p>
+<ul>
+<li>Chapati</li>
+<li>Puri</li>
+<li>Naan</li>
+<li>Butter Roti</li>
+<li>Paratha (All types)</li>
+<li>Mocktails & Beverages</li>
+</ul>
+</div>
+
+<div class="menu-card">
+<h3><i class="fa-solid fa-ice-cream"></i>Dessert</h3>
+<p>Sweet endings that bring joy to every celebration!</p>
+<ul>
+<li>Gulab Jamun</li>
+<li>Kheer (Rice & Sabudana)</li>
+<li>Magas</li>
+<li>Basundi</li>
+<li>Fruit Custard</li>
+<li>Jalebi</li>
+<li>Gajar Halwa</li>
+<li>Suji Halwa</li>
+<li>Dudhi Halwa</li>
+<li>Laddu (All types)</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 Tiffin Tales | Designed by Komal</p>
+</footer>
+
 </body>
 </html>
