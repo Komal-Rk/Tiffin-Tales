@@ -7,7 +7,6 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -23,8 +22,6 @@ background-attachment:fixed;
 animation:fadePage 1s ease;
 }
 
-/* page fade animation */
-
 @keyframes fadePage{
 from{opacity:0}
 to{opacity:1}
@@ -37,7 +34,7 @@ background:linear-gradient(90deg,#ff6f61,#ffcc00);
 color:white;
 
 display:flex;
-justify-content:space-between;
+flex-direction:column;
 align-items:center;
 
 padding:18px 25px;
@@ -49,7 +46,7 @@ margin:0;
 font-size:2rem;
 letter-spacing:1px;
 font-weight:600;
-white-space:nowrap;
+text-align:center;
 }
 
 /* NAVIGATION */
@@ -58,6 +55,7 @@ nav{
 display:flex;
 gap:25px;
 align-items:center;
+margin-top:8px;
 }
 
 nav a{
@@ -71,8 +69,6 @@ font-size:17px;
 position:relative;
 transition:0.3s;
 }
-
-/* underline animation */
 
 nav a::after{
 content:"";
@@ -145,8 +141,6 @@ font-size:1.25rem;
 color:#444;
 font-weight:400;
 }
-
-/* slide animation */
 
 @keyframes slideUp{
 from{
@@ -336,6 +330,7 @@ letter-spacing:0.5px;
 <i class="fa-solid fa-code"></i>
 Designed by Komal
 </p>
+
 </footer>
 
 </body>
