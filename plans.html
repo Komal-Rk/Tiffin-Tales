@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plans - Tiffin Tale</title>
+<title>Tiffin Plans - Tiffin Tale</title>
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body {
@@ -22,7 +24,14 @@ header {
   text-align: center;
 }
 
-header h1 { margin: 0; }
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+nav {
+  margin-top: 10px;
+}
 
 nav a {
   color: white;
@@ -31,17 +40,14 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover { text-decoration: underline; }
+nav a:hover {
+  text-decoration: underline;
+}
 
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 3rem 2rem;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 2.5rem;
 }
 
 .plan-grid {
@@ -53,15 +59,10 @@ h2 {
 .plan-card {
   background: white;
   color: black;
-  padding: 1.8rem;
+  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   border-left: 5px solid #ff6f61;
-  transition: 0.3s ease;
-}
-
-.plan-card:hover {
-  transform: translateY(-6px);
 }
 
 .plan-card h3 {
@@ -71,55 +72,23 @@ h2 {
 
 .plan-card ul {
   padding-left: 20px;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .price {
   font-size: 1.4rem;
-  color: #ff6f61;
+  color: #ffcc00;
   font-weight: bold;
   margin-top: 1rem;
 }
 
-/* Add-On Styling */
-.addon-section {
-  margin-top: 3rem;
-}
-
-.addon-box {
-  background: white;
-  color: black;
-  padding: 1.8rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.addon-box h3 {
-  color: #ff6f61;
-}
-
-.addon-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.addon-item:last-child {
-  border-bottom: none;
-}
-
-/* Notes */
 .note {
   margin-top: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
   background: rgba(255,255,255,0.2);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
-}
-
-.note ul {
-  margin: 0;
-  padding-left: 20px;
 }
 
 footer {
@@ -135,110 +104,100 @@ footer {
 
 <header>
   <h1>Tiffin Subscription Plans</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="daily-tiffins.html">Daily Tiffin</a>
-    <a href="feast-menu.html">Feast for Festival</a>
-    <a href="plans.html">Plans</a>
-    <a href="review.html">Review</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<nav>
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Home</a>
+
+<a href="review.html">
+<i class="fa-solid fa-star"></i> Review</a>
+<a href="contact.html">
+<i class="fa-solid fa-envelope"></i> Contact</a> 
+</nav>
 </header>
 
 <div class="container">
 
-<h2>Choose Your Perfect Plan</h2>
+  <h2 style="text-align:center; margin-bottom:2rem;">
+    Choose Your Perfect Plan
+  </h2>
 
-<div class="plan-grid">
+  <div class="plan-grid">
 
-<div class="plan-card">
-<h3>🥗 Balanced Month</h3>
-<ul>
-<li>8oz Sabji</li>
-<li>8oz Dal / Kadhi</li>
-<li>8oz Rice</li>
-<li>4 Chapati</li>
-</ul>
-<div class="price">$180</div>
-</div>
-
-<div class="plan-card">
-<h3>🍛 Wholesome Month</h3>
-<ul>
-<li>12oz Sabji</li>
-<li>12oz Dal / Kadhi</li>
-<li>12oz Rice</li>
-<li>8 Chapati</li>
-</ul>
-<div class="price">$240</div>
-</div>
-
-<div class="plan-card">
-<h3>🌟 Signature Plan</h3>
-<ul>
-<li>8oz Sabji</li>
-<li>8oz Kathod</li>
-<li>8oz Dal / Kadhi</li>
-<li>8oz Rice</li>
-<li>8 Chapati</li>
-</ul>
-<div class="price">$300</div>
-</div>
-
-<div class="plan-card">
-<h3>🍱 Trial Tiffin (Daily)</h3>
-<ul>
-<li>Standard Daily Meal</li>
-</ul>
-<div class="price">$10 per day</div>
-</div>
-
-</div>
-
-<!-- Daily Tiffin Add-On Section -->
-<div class="addon-section">
-  <div class="addon-box">
-    <h3>🍽 Daily Tiffin Add-On (Per Meal)</h3>
-
-    <div class="addon-item">
-      <span>Butter Milk</span>
-      <span>$2</span>
+    <!-- Wholesome Week -->
+    <div class="plan-card">
+      <h3>🥗 Balanced Month</h3>
+      <ul>
+        <li>8oz Sabji</li>
+        <li>8oz Dal / Kadhi</li>
+        <li>8oz Rice</li>
+        <li>4 Chapati</li>
+      </ul>
+      <div class="price">$180</div>
     </div>
 
-    <div class="addon-item">
-      <span>Masala Butter Milk</span>
-      <span>$2</span>
+    <!-- Wholesome Month -->
+    <div class="plan-card">
+      <h3>🍛 Hearty Month</h3>
+      <ul>
+        <li>12oz Sabji</li>
+        <li>12oz Dal / Kadhi</li>
+        <li>12oz Rice</li>
+        <li>8 Chapati</li>
+      </ul>
+      <div class="price">$240</div>
     </div>
 
-    <div class="addon-item">
-      <span>Sweet Lassi</span>
-      <span>$3</span>
+    <!-- Signature Plan -->
+    <div class="plan-card">
+      <h3>🌟 Signature Feast </h3>
+      <ul>
+        <li>8oz Sabji</li>
+        <li>8oz Kathod</li>
+        <li>8oz Dal / Kadhi</li>
+        <li>8oz Rice</li>
+        <li>8 Chapati</li>
+      </ul>
+      <div class="price">$300</div>
     </div>
 
-    <div class="addon-item">
-      <span>Sweet</span>
-      <span>$3</span>
+    <!-- Trial Plan -->
+    <div class="plan-card">
+      <h3>🍱 Trial Tiffin (Daily Basis)</h3>
+        <ul>
+        <li>8oz Sabji</li>
+        <li>8oz Dal / Kadhi</li>
+        <li>8oz Rice</li>
+        <li>4 Chapati</li>
+      </ul>
+      <div class="price">$10 per day</div>
+    </div>
+
+    <div class="plan-card">
+      <h3>🍱 Daily Tiffin- Add On (per Meal)</h3>
+        <ul>
+        <li>Butter Milk <div class="price">2$</li>
+        <li>Masala Butter Milk <div class="price">2$</div></li>
+        <li>Sweet Lassi <div class="price">3$</div></li>
+        <li>Sweet<div class="price">3$</div></li>
+         </ul>
+
     </div>
 
   </div>
-</div>
 
-<!-- Notes -->
-<div class="note">
-<strong>Note:</strong>
-<ul>
-<li>All plans are available Monday to Friday only.</li>
-<li>Prices listed apply to pickup orders only.</li>
-<li>Add-on items are optional and charged separately.</li>
-</ul>
-</div>
+  <div class="note">
+    <strong>Note:</strong> 
+    <u1>
+    <li>1. Meal plans are available on weekdays only (Monday to Friday).</li> 
+    <li>2. Prices listed apply to pickup orders only.</li> </u1>
+    
+  </div>
 
 </div>
 
 <footer>
-© 2026 Tiffin Tale | Designed by Komal
+  © 2026 Tiffin Tale | Designed by Komal
 </footer>
 
 </body>
-
 </html>
