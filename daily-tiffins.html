@@ -1,126 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Tiffins - Tiffin Tale</title>
-<!-- Font Awesome Icons -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Tiffins - Tiffin Tale</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                        url('vegetables.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
 
-    header {
-      background: linear-gradient(90deg, #ff6f61, #ffcc00);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+<style>
 
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
+body {
+font-family: 'Segoe UI', sans-serif;
+margin: 0;
+padding: 0;
+background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('vegetables.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .hero-box {
-      background: linear-gradient(135deg, #ffffff, #f2f2f2);
-      padding: 2.5rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      margin-bottom: 3rem;
-    }
-
-    .hero-box h2 {
-      font-size: 2.4rem;
-      color: #ff6f61;
-      margin-bottom: 1rem;
-    }
-
-    .hero-box p {
-      font-size: 1.2rem;
-      color: #444;
-      font-weight: 500;
-    }
-
-    .section-heading {
-      color: green;
-      background-color: white;
-      padding: 12px 30px;
-      border-radius: 8px;
-      display: inline-block;
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin: 2rem 0 1rem 0;
-    }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .menu-card {
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-left: 5px solid #ff6f61;
-      transition: 0.3s ease;
-    }
-
-    .menu-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .menu-card h3 {
-      color: #ff6f61;
-      margin-top: 0;
-    }
-
-    .menu-card p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
- /* =========================
-   RESPONSIVE HEADER FIX
-========================= */
+/* ================= HEADER FIX ================= */
 
 header{
+background: linear-gradient(90deg, #ff6f61, #ffcc00);
+color:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -129,197 +32,249 @@ padding:15px 25px;
 box-sizing:border-box;
 }
 
+header h1{
+margin:0;
+font-size:2rem;
+}
+
+/* Navigation */
+
 nav{
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-justify-content:center;
 }
 
 nav a{
-font-size:16px;
+color:white;
+text-decoration:none;
+font-weight:bold;
 display:flex;
 align-items:center;
 gap:6px;
 }
 
-/* =========================
-   MOBILE SCREEN FIX
-========================= */
+nav a:hover{
+text-decoration:underline;
+}
+
+/* ================= MOBILE HEADER ================= */
 
 @media (max-width:768px){
 
 header{
 flex-direction:column;
-align-items:center;
 text-align:center;
-padding:15px;
 }
 
 header h1{
-font-size:1.6rem;
 margin-bottom:10px;
+font-size:1.6rem;
 }
 
 nav{
 width:100%;
 justify-content:space-around;
-gap:10px;
 }
 
 nav a{
 font-size:14px;
 }
 
-.hero h2{
-font-size:2rem;
 }
 
-.hero p{
-font-size:14px;
+/* ================= CONTENT ================= */
+
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 2rem;
 }
 
-.container{
-padding:20px;
+.hero-box {
+background: linear-gradient(135deg, #ffffff, #f2f2f2);
+padding: 2.5rem;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+margin-bottom: 3rem;
 }
 
-.menu-grid{
-grid-template-columns:1fr;
+.hero-box h2 {
+font-size: 2.4rem;
+color: #ff6f61;
+margin-bottom: 1rem;
 }
 
-.review-section{
-margin:20px;
+.hero-box p {
+font-size: 1.2rem;
+color: #444;
+font-weight: 500;
 }
 
+.section-heading {
+color: green;
+background-color: white;
+padding: 12px 30px;
+border-radius: 8px;
+display: inline-block;
+font-size: 1.8rem;
+font-weight: bold;
+margin: 2rem 0 1rem 0;
 }
 
-/* =========================
-   SMALL PHONE FIX
-========================= */
-
-@media (max-width:480px){
-
-header h1{
-font-size:1.4rem;
+.menu-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+margin-top: 1rem;
 }
 
-nav a{
-font-size:13px;
+.menu-card {
+background: #f9f9f9;
+padding: 1.5rem;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+border-left: 5px solid #ff6f61;
+transition: 0.3s ease;
 }
 
-.hero h2{
-font-size:1.7rem;
+.menu-card:hover {
+transform: translateY(-5px);
 }
 
+.menu-card h3 {
+color: #ff6f61;
+margin-top: 0;
 }
-  </style>
+
+.menu-card p {
+color: #555;
+line-height: 1.6;
+}
+
+footer {
+background: #333;
+color: white;
+text-align: center;
+padding: 1rem;
+margin-top: 3rem;
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Daily Tiffin Menu</h1>
-    
-    <nav>
-     <a href="index.html">
-<i class="fa-solid fa-house"></i> Home</a>
-       <a href="plans.html">
-      <i class="fa-solid fa-clipboard-list"></i> Plans </a>
-      <a href="review.html">
-      <i class="fa-solid fa-star"></i> Review</a>
-      <a href="contact.html">
-<i class="fa-solid fa-envelope"></i> Contact</a> 
+<header>
 
-    </nav>
-   
-    </a>
-  </header>
- 
+<h1>Daily Tiffin Menu</h1>
+
+<nav>
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Home
 </a>
 
-  <div class="container">
+<a href="plans.html">
+<i class="fa-solid fa-clipboard-list"></i> Plans
+</a>
 
-    <div class="hero-box">
-      <h2>Enjoy Variety with Our Two-Week Menu Plan</h2>
-      <p>Fresh, nutritious meals prepared daily with the finest ingredients.</p>
-    </div>
+<a href="review.html">
+<i class="fa-solid fa-star"></i> Review
+</a>
 
-    <h3 class="section-heading">Week 1</h3>
+<a href="contact.html">
+<i class="fa-solid fa-envelope"></i> Contact
+</a>
 
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3>🥘 Monday</h3>
-        <p>Sabji: Besan Gatta; Dal: Moong Dal; Rice: Steam Rice; Roti: Phulka Chapati; Papad / Fryums</p>
-      </div>
+</nav>
 
-      <div class="menu-card">
-        <h3>🥘 Tuesday</h3>
-        <p>Sabji: Tomato Potato / Onion Potato; Dal: Mithi Dal; Rice: Steam Rice; Roti: Phulka Chapati; Papad / Fryums</p>
-      </div>
+</header>
 
-      <div class="menu-card">
-        <h3>🥘 Wednesday</h3>
-        <p>Sabji: Cabbage Potato; Dal: Chori / Urad / Moong Dal; Rice: Peas Pulao; Papad / Fryums</p>
-      </div>
+<div class="container">
 
-      <div class="menu-card">
-        <h3>🥘 Thursday</h3>
-        <p>Sabji: Soybean; Dal: Kadhi; Rice: Steam Rice; Roti: Phulka Chapati; Papad / Fryums</p>
-      </div>
+<div class="hero-box">
+<h2>Enjoy Variety with Our Two-Week Menu Plan</h2>
+<p>Fresh, nutritious meals prepared daily with the finest ingredients.</p>
+</div>
 
-      <div class="menu-card">
-        <h3>⭐ Friday Special</h3>
-        <p>Chole Puri / Pav Bhaji / Paneer Lababdar / Mix Veg / Palak Paneer / Biryani / Tawa Pulao / Veg Fried Rice / Potato Paratha (with Sweet)</p>
-      </div>
-    </div>
+<h3 class="section-heading">Week 1</h3>
 
- <h3 class="section-heading">Week 2</h3>
+<div class="menu-grid">
 
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3>🥘 Monday</h3>
-        <p>Sabji: Cauliflower Potato; Legumes: Desi Channa; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
-      </div>
+<div class="menu-card">
+<h3>🥘 Monday</h3>
+<p>Sabji: Besan Gatta; Dal: Moong Dal; Rice: Steam Rice; Roti: Phulka Chapati; Papad / Fryums</p>
+</div>
 
-      <div class="menu-card">
-        <h3>🥘 Tuesday</h3>
-        <p>Sabji: Besan Gattha; Daal: Mung Daal; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
-      </div>
+<div class="menu-card">
+<h3>🥘 Tuesday</h3>
+<p>Sabji: Tomato Potato / Onion Potato; Dal: Mithi Dal; Rice: Steam Rice; Roti: Phulka Chapati; Papad / Fryums</p>
+</div>
 
-      <div class="menu-card">
-        <h3>🥘 Wednesday</h3>
-        <p>Sabji: Brinjal & Potato; Legumes: Rajma; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
-      </div>
+<div class="menu-card">
+<h3>🥘 Wednesday</h3>
+<p>Sabji: Cabbage Potato; Dal: Chori / Urad / Moong Dal; Rice: Peas Pulao; Papad / Fryums</p>
+</div>
 
-      <div class="menu-card">
-        <h3>🥘 Thursday</h3>
-        <p>Sabji: Sev Tomato; Daal: Spicy Toor Daal; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
-      </div>
+<div class="menu-card">
+<h3>🥘 Thursday</h3>
+<p>Sabji: Soybean; Dal: Kadhi; Rice: Steam Rice; Roti: Phulka Chapati; Papad / Fryums</p>
+</div>
 
-      <div class="menu-card">
-        <h3>⭐ Friday Special</h3>
-        <p>Cholle-Channa Puri / Pav Bhaji / Paneer Lababdar / Mix Veg / Palak Paneer / Biryani / Tawa Pulav / Veg Fried Rice / Sweet Potato Paratha</p>
-      </div>
-    </div>
+<div class="menu-card">
+<h3>⭐ Friday Special</h3>
+<p>Chole Puri / Pav Bhaji / Paneer Lababdar / Mix Veg / Palak Paneer / Biryani / Tawa Pulao / Veg Fried Rice / Potato Paratha (with Sweet)</p>
+</div>
 
+</div>
 
-    <h3 class="section-heading">Daily Tiffin Add-On</h3>
+<h3 class="section-heading">Week 2</h3>
 
-    <div class="menu-grid">
-      <div class="menu-card"><h3>🧋 Buttermilk</h3></div>
-      <div class="menu-card"><h3>🧋 Masala Buttermilk</h3></div>
-      <div class="menu-card"><h3>🧋 Sweet Lassi</h3></div>
-      <div class="menu-card"><h3>🍮 Sweet</h3></div>
-    </div>
+<div class="menu-grid">
 
-  </div>
+<div class="menu-card">
+<h3>🥘 Monday</h3>
+<p>Sabji: Cauliflower Potato; Legumes: Desi Channa; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
+</div>
 
-  <footer>
-    <p>© 2026 Tiffin Tales | Designed by Komal</p>
-  </footer>
+<div class="menu-card">
+<h3>🥘 Tuesday</h3>
+<p>Sabji: Besan Gattha; Daal: Mung Daal; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
+</div>
+
+<div class="menu-card">
+<h3>🥘 Wednesday</h3>
+<p>Sabji: Brinjal & Potato; Legumes: Rajma; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
+</div>
+
+<div class="menu-card">
+<h3>🥘 Thursday</h3>
+<p>Sabji: Sev Tomato; Daal: Spicy Toor Daal; Rice: Steam Rice; Roti: Pulka Chappati; Papad / Fryums</p>
+</div>
+
+<div class="menu-card">
+<h3>⭐ Friday Special</h3>
+<p>Cholle-Channa Puri / Pav Bhaji / Paneer Lababdar / Mix Veg / Palak Paneer / Biryani / Tawa Pulav / Veg Fried Rice / Sweet Potato Paratha</p>
+</div>
+
+</div>
+
+<h3 class="section-heading">Daily Tiffin Add-On</h3>
+
+<div class="menu-grid">
+<div class="menu-card"><h3>🧋 Buttermilk</h3></div>
+<div class="menu-card"><h3>🧋 Masala Buttermilk</h3></div>
+<div class="menu-card"><h3>🧋 Sweet Lassi</h3></div>
+<div class="menu-card"><h3>🍮 Sweet</h3></div>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Tiffin Tales | Designed by Komal</p>
+</footer>
 
 </body>
 </html>
-
-
-
