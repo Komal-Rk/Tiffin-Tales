@@ -118,6 +118,103 @@ text-align:center;
 padding:20px;
 }
 
+  /* =========================
+   RESPONSIVE HEADER FIX
+========================= */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+padding:15px 25px;
+box-sizing:border-box;
+}
+
+nav{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+font-size:16px;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+/* =========================
+   MOBILE SCREEN FIX
+========================= */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:15px;
+}
+
+header h1{
+font-size:1.6rem;
+margin-bottom:10px;
+}
+
+nav{
+width:100%;
+justify-content:space-around;
+gap:10px;
+}
+
+nav a{
+font-size:14px;
+}
+
+.hero h2{
+font-size:2rem;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.container{
+padding:20px;
+}
+
+.menu-grid{
+grid-template-columns:1fr;
+}
+
+.review-section{
+margin:20px;
+}
+
+}
+
+/* =========================
+   SMALL PHONE FIX
+========================= */
+
+@media (max-width:480px){
+
+header h1{
+font-size:1.4rem;
+}
+
+nav a{
+font-size:13px;
+}
+
+.hero h2{
+font-size:1.7rem;
+}
+
+}
+
 </style>
 </head>
 
@@ -300,3 +397,4 @@ displayReviews();
 
 </body>
 </html>
+
